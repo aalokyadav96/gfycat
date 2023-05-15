@@ -1,0 +1,206 @@
+{{define "header"}}
+  <header>
+  <h2>
+            <a href="#">
+               gfy_9
+            </a>
+         </h2>
+	<section class="formcon">
+<form method="POST" class="homeform">
+    <div class="d3 " style="width:100%; ">
+  <input name="text" class="search-field" placeholder="Finds anything">
+  <label class="search-btn">
+    <input type="submit" style="display:none">
+    <svg class="srchicon" viewBox="0 0 24 24" width="100%" height="100%" role="img" stroke="#000000">
+        <circle cx="11" cy="11" r="8"></circle>
+        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+    </svg>
+  </label>
+  </div>
+</form>
+</section>
+  </header>
+  
+      <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Ubuntu, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 400;
+            line-height: 1.6;
+            background: #ffffff;
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            box-sizing: border-box;
+            vertical-align: baseline;
+        }
+
+
+        body::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        body::-webkit-scrollbar-thumb {
+            background-color: #555;
+        }
+    </style>
+	<style>
+    
+    .ficons {
+        padding: 0.4rem 0;
+        font-size: 1rem;
+        }
+        .logoogle {
+        fill: none;
+        height: 2rem;
+        padding: 2px;
+        /* box-shadow: 1px 2px 5px rgb(212 212 212); */
+        width: 2rem;
+        border-radius: 8px;
+        /* background: #fff; */
+        stroke-width: 1.4;
+    }
+    
+.search_form__logo__button {
+    cursor: pointer;
+    height: 3.8rem;
+    width: 3.8rem;
+    background-color: #ffffff00;
+    border: none;
+    outline: none;
+    border-radius: 0 6px 6px 0;
+    background: url(https://www.qwant.com/maps/statics/images/qwant-logo.svg) no-repeat;
+    background-size: contain;
+    margin: 0 0 3rem 0;
+}
+.search-btn {
+    height: 3.3rem;
+    width: 3.4rem;
+    padding: 0.3rem 0.6rem;
+    background-color: #ffffff00;
+    border: none;
+    outline: none;
+    border-radius: 0 6px 6px 0;
+    display: flex;
+    border-left: 1px solid #f3f3f3;
+    align-items: center;
+}
+.search-field {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border: 0px;
+    outline: none;
+    padding: 0rem 0.6rem;
+    background: transparent;
+    height: 3rem;
+    color: #000;
+    font-size: 1.1rem;
+    width: 100%;
+}
+    .d3 {
+        display: flex;
+        background: #ffffff;
+        border: 2px solid #797979;
+        max-width: 550px;
+        align-items: center;
+        border-radius: 6px;
+        box-shadow: rgb(0 0 0 / 20%) 0 2px 12px 0;
+    }
+    .homeform {
+    max-width: 500px;
+    width: 100%;
+    margin: 0;
+}
+.formcon {
+    max-width: 560px;
+    width: 100%;
+}
+    
+    .clrful {
+    stroke-width: 1.4;
+    border-radius: 5px;
+    width: 3rem;
+    height: 3rem;
+    fill: none;
+    stroke: #4f4f4f;
+    box-shadow: none;
+    display: block;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: .2s ease;
+}
+.srchicon {
+    stroke-width: 1.4;
+    border-radius: 5px;
+    width: 2.4rem;
+    height: 2.4rem;
+    fill: none;
+    stroke: #4f4f4f;
+    box-shadow: none;
+    display: block;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: .2s ease;
+}
+header {
+    position: relative;
+    top: 0;
+    left: 0;
+/*    box-shadow: 0 0 15px #00000030;
+    box-shadow: 0 8px 16px 0 rgb(214 214 214 / 20%), 0 8px 40px 0 rgb(179 179 179 / 19%);*/
+    z-index: 10;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 0 50px 0;
+    border-bottom: 1px solid #eee;
+}
+a {
+    text-decoration: none;
+    color: #202124;
+}
+a, input, textarea, select, button {
+    outline: 0;
+}
+body, p, td, label, textarea, a, li, input, button, textarea, select {
+    font-family: 'Breezesans', arial, sans-serif;
+    color: #444;
+    -webkit-text-size-adjust: none;
+}
+@media screen and (max-width: 600px) {
+
+    .formcon {
+    }
+    }
+    
+    @media screen and (max-width: 1199px) and (min-width: 601px) {
+    
+    .formcon {
+    }
+    }
+    
+    @media screen and (min-width: 1200px) {
+    
+    .formcon {
+    }
+    }
+	
+	.pincodemain {
+    fill: none;
+    box-shadow: 1px 1px 5px rgb(212 212 212);
+    border-radius: 6px;
+    background: #fff;
+    width: 3.4rem;
+    height: 3.4rem;
+    padding: 2px;
+    stroke: #1ed760;
+}
+#image {
+    width: 100%;
+}
+</style>
+{{end}}
