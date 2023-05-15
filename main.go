@@ -24,12 +24,8 @@ func main() {
 	mux := http.NewServeMux()
 	mux.HandleFunc("/", IndexHandler)
 	mux.HandleFunc("/submit", uploadHandler)
-	log.Println("Starting server at localhost:4000")
-	if err := http.ListenAndServe("localhost:4000", mux); err != nil {
+	log.Println("Starting server port :4000")
+	if err := http.ListenAndServe(":4000", mux); err != nil {
 		log.Fatal(err)
 	}
-}
-
-func chekIfAllFoldersExist() {
-	
 }
