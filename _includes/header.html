@@ -5,7 +5,7 @@
                gfy
             </a>
          </h2>
-	<!--section class="formcon">
+	<section class="formcon">
 <form method="POST" class="homeform">
     <div class="d3 " style="width:100%; ">
   <input name="text" class="search-field" placeholder="Finds anything">
@@ -18,7 +18,7 @@
   </label>
   </div>
 </form>
-</section-->
+</section>
   </header>
   
       <style>
@@ -27,8 +27,9 @@
             font-weight: 400;
             line-height: 1.6;
             background: #ffffff;
-            margin: 0;
             padding: 0;
+			max-width: 1200px;
+			margin: 0 auto;
         }
 
         * {
@@ -47,36 +48,9 @@
     </style>
 	<style>
     
-    .ficons {
-        padding: 0.4rem 0;
-        font-size: 1rem;
-        }
-        .logoogle {
-        fill: none;
-        height: 2rem;
-        padding: 2px;
-        /* box-shadow: 1px 2px 5px rgb(212 212 212); */
-        width: 2rem;
-        border-radius: 8px;
-        /* background: #fff; */
-        stroke-width: 1.4;
-    }
-    
-.search_form__logo__button {
-    cursor: pointer;
-    height: 3.8rem;
-    width: 3.8rem;
-    background-color: #ffffff00;
-    border: none;
-    outline: none;
-    border-radius: 0 6px 6px 0;
-    background: url(https://www.qwant.com/maps/statics/images/qwant-logo.svg) no-repeat;
-    background-size: contain;
-    margin: 0 0 3rem 0;
-}
 .search-btn {
-    height: 3.3rem;
-    width: 3.4rem;
+    height: 2.3rem;
+    width: 3rem;
     padding: 0.3rem 0.6rem;
     background-color: #ffffff00;
     border: none;
@@ -94,42 +68,28 @@
     outline: none;
     padding: 0rem 0.6rem;
     background: transparent;
-    height: 3rem;
+    height: 2.5rem;
     color: #000;
-    font-size: 1.1rem;
+    font-size: 1rem;
     width: 100%;
 }
-    .d3 {
-        display: flex;
-        background: #ffffff;
-        border: 2px solid #797979;
-        max-width: 550px;
-        align-items: center;
-        border-radius: 6px;
-        box-shadow: rgb(0 0 0 / 20%) 0 2px 12px 0;
-    }
-    .homeform {
-    max-width: 500px;
+.d3 {
+    display: flex;
+    background: #ffffff;
+    border: 1px solid #797979;
+    max-width: 550px;
+    align-items: center;
+    border-radius: 6px;
+    /* box-shadow: rgb(0 0 0 / 20%) 0 2px 12px 0; */
+}
+.homeform {
+    max-width: 350px;
     width: 100%;
     margin: 0;
 }
 .formcon {
-    max-width: 560px;
+    max-width: 350px;
     width: 100%;
-}
-    
-    .clrful {
-    stroke-width: 1.4;
-    border-radius: 5px;
-    width: 3rem;
-    height: 3rem;
-    fill: none;
-    stroke: #4f4f4f;
-    box-shadow: none;
-    display: block;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-    transition: .2s ease;
 }
 .srchicon {
     stroke-width: 1.4;
@@ -158,6 +118,8 @@ header {
     background: #ffffff;
     padding: 0 50px 0;
     border-bottom: 1px solid #eee;
+	max-width: 800px;
+	margin: 0 auto;
 }
 a {
     text-decoration: none;
@@ -171,16 +133,27 @@ body, p, td, label, textarea, a, li, input, button, textarea, select {
     color: #444;
     -webkit-text-size-adjust: none;
 }
-@media screen and (max-width: 600px) {
-
-    .formcon {
+footer {
+		max-width: 800px;
+		text-align: center;
+		margin: 0 auto;
     }
+@media screen and (max-width: 600px) {
+    .formcon {
+	padding : 0 1rem;
+    }
+header {	
+	padding : 0 1rem;
+}
     }
     
     @media screen and (max-width: 1199px) and (min-width: 601px) {
-    
     .formcon {
+	padding : 0 2rem;
     }
+header {	
+	padding : 0 2rem;
+}
     }
     
     @media screen and (min-width: 1200px) {
@@ -189,18 +162,5 @@ body, p, td, label, textarea, a, li, input, button, textarea, select {
     }
     }
 	
-	.pincodemain {
-    fill: none;
-    box-shadow: 1px 1px 5px rgb(212 212 212);
-    border-radius: 6px;
-    background: #fff;
-    width: 3.4rem;
-    height: 3.4rem;
-    padding: 2px;
-    stroke: #1ed760;
-}
-#image {
-    width: 100%;
-}
 </style>
 {{end}}
