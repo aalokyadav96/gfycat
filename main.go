@@ -21,6 +21,7 @@ var tmpl = template.Must(template.ParseGlob("_includes/*.html"))
 func main() {
 	http.HandleFunc("/", uploadFileHandler())
 	http.HandleFunc("/headless", headlessUpload())
+	http.HandleFunc("/delete", deleteUploads())
 
 	fs := http.FileServer(http.Dir(uploadPath))
 	http.Handle("/files/", http.StripPrefix("/files", fs))
@@ -28,8 +29,8 @@ func main() {
 	thumfs := http.FileServer(http.Dir("./thumbs"))
 	http.Handle("/img/", http.StripPrefix("/img", thumfs))
 
-	log.Print("Server started on localhost:4000, use /upload for uploading files and /files/{fileName} for downloading")
-	log.Fatal(http.ListenAndServe("localhost:4000", nil))
+	log.Print("Server started on :4000")
+	log.Fatal(http.ListenAndServe(":4000", nil))
 }
 
 func uploadFileHandler() http.HandlerFunc {
@@ -233,4 +234,12 @@ func randToken(len int) string {
 	return fmt.Sprintf("%x", b)
 }
 
-
+func deleteUploads(w http.ResponseWriter, r *http.Request) {
+   err := os.Remove(uploadPath)
+   if err != nil {
+      fmt.Println(err)
+   } else {
+      fmt.Println("Directory", dirName, "removed successfully")
+   }
+	w.Write([]byte(fmt.Sprintf("deleted all")))
+}
