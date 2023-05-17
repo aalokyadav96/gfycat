@@ -21,7 +21,7 @@ var tmpl = template.Must(template.ParseGlob("_includes/*.html"))
 func main() {
 	http.HandleFunc("/", uploadFileHandler())
 	http.HandleFunc("/headless", headlessUpload())
-	http.HandleFunc("/delete", deleteUploads())
+	http.HandleFunc("/delete", deleteUploads)
 
 	fs := http.FileServer(http.Dir(uploadPath))
 	http.Handle("/files/", http.StripPrefix("/files", fs))
@@ -239,7 +239,7 @@ func deleteUploads(w http.ResponseWriter, r *http.Request) {
    if err != nil {
       fmt.Println(err)
    } else {
-      fmt.Println("Directory", dirName, "removed successfully")
+      fmt.Println("Directory", uploadPath, "removed successfully")
    }
 	w.Write([]byte(fmt.Sprintf("deleted all")))
 }
