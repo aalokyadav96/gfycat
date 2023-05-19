@@ -1,8 +1,35 @@
 <!DOCTYPE HTML>
+<html lang="en">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="description" content="" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
+      <meta name="copyright" content="Copyright 2023 9if, Inc."/>
+      <meta property="og:site_name" content="9if"/>
+      <meta name="twitter:site" content="@9if"/>
+      <meta name="twitter:domain" content="{{.WebsiteName}}"/>
+      <meta property="author" content="9if"/>
+      <meta property="article:author" content="9if"/>
+      <title>{{.Title}}</title>
+      <meta property="og:url" data-react-helmet="true" content="{{.WebsiteName}}/v/{{.PostURL}}">
+      <meta name="twitter:image" data-react-helmet="true" content="{{.WebsiteName}}/files/{{.PostURL}}h.jpg">
+      <link rel="alternate" type="application/json+oembed" href="https://api.imgur.com/oembed.json?url={{.WebsiteName}}/v/{{.PostURL}}" title="{{.Title}}">
+      <link rel="alternate" type="application/xml+oembed" href="https://api.imgur.com/oembed.xml?url={{.WebsiteName}}/v/{{.PostURL}}" title="{{.Title}}">
+      <link rel="canonical" href="{{.WebsiteName}}/v/{{.PostURL}}" data-react-helmet="true" >
+      <meta name="robots" content="none" data-react-helmet="true" >
+      <meta property="og:video:height" data-react-helmet="true" content="1728">
+      <meta property="og:video:width" data-react-helmet="true" content="960">
+      <meta property="og:video" data-react-helmet="true" content="{{.WebsiteName}}/files/{{.PostURL}}.mp4">
+      <meta property="og:video:secure_url" data-react-helmet="true" content="{{.WebsiteName}}/files/{{.PostURL}}.mp4">
+      <meta property="og:video:type" data-react-helmet="true" content="video/mp4">
+      <meta property="og:type" data-react-helmet="true" content="video.other">
+      <meta property="og:image" data-react-helmet="true" content="{{.WebsiteName}}/files/{{.PostURL}}.jpg?fbplay">
+      <meta name="twitter:card" data-react-helmet="true" content="player">
+      <meta name="twitter:player" data-react-helmet="true" content="{{.WebsiteName}}/files/{{.PostURL}}.gifv?twitter#t">
+      <meta name="twitter:player:height" data-react-helmet="true" content="1728">
+      <meta name="twitter:player:width" data-react-helmet="true" content="960">
+      <meta name="twitter:player:stream" data-react-helmet="true" content="{{.WebsiteName}}/files/{{.PostURL}}.mp4">
+      <meta name="twitter:player:stream:content_type" data-react-helmet="true" content="video/mp4">
+      <meta name="description" data-react-helmet="true" content="Testing for now1.">
+   </head>
 <body onload="myFunction()">

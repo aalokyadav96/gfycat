@@ -34,23 +34,18 @@ func main() {
 	posterfs := http.FileServer(http.Dir(posterpath))
 	http.Handle("/poster/", http.StripPrefix("/poster", posterfs))
 
-	log.Print("Server started on :4000")
+	log.Print("Server started on localhost:4000")
 	log.Fatal(http.ListenAndServe(":4000", nil))
 }
 
- func GetPort() string {
- 	var port = os.Getenv("PORT")
- 	var env = os.Getenv("ENV")
- 	if port == "" {
- 		port = "4000"
- 		fmt.Println("INFO: defaulting to " + port)
- 	}
- 	if env == "" {
-		return "localhost:" + port
- 	} else {
-		return ":" + port
-	}
+type PostHead struct {
+	PostURL string
+	Title string
+	WebsiteName string
 }
+
+//"https://gifs-ba0f.onrender.com"
+//http://localhost:4000
 
 func viewPost()  http.HandlerFunc {
 	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
@@ -58,7 +53,8 @@ func viewPost()  http.HandlerFunc {
 			title := r.URL.Path[len("/v/"):]
 			fmt.Println("path", r.URL.Path)
 			res := Res {Video: "/files/"+ title, Poster: "/poster/"+ title}
-			tmpl.ExecuteTemplate(w, "head.html", nil)
+			jg := PostHead{PostURL: title, Title: "Test GIF", WebsiteName: "https://gifs-ba0f.onrender.com"}
+			tmpl.ExecuteTemplate(w, "head.html", jg)
 			tmpl.ExecuteTemplate(w, "viewpost.html", res)
 			return
 		}
