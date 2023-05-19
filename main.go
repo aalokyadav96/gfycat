@@ -34,8 +34,8 @@ func main() {
 	posterfs := http.FileServer(http.Dir(posterpath))
 	http.Handle("/poster/", http.StripPrefix("/poster", posterfs))
 
-	log.Print("Server started on localhost:4000")
-	log.Fatal(http.ListenAndServe(GetPort(), nil))
+	log.Print("Server started on :4000")
+	log.Fatal(http.ListenAndServe(":4000", nil))
 }
 
  func GetPort() string {
