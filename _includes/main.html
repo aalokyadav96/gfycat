@@ -16,17 +16,17 @@ function myFunction(){
       txt = "Select one or more files.";
     } else {
       for (var i = 0; i < x.files.length; i++) {
-        txt += "<article class='filePreviewCon'><section class='filedesc' ><br><strong>" + (i+1) + ". file</strong><br>";
+        txt += "<article class='filePreviewCon'><section class='filedesc' ><br><strong>" + (i+1) + "</strong><br>";
         var file = x.files[i];
         if ('name' in file) {
-          txt += "name: " + file.name + "<br>";
+          txt += "<span>title: </span><input type='text' name='vidtitile' value='" + file.name + "'><br>";
         }
         if ('size' in file) {
-		if (file.size > 10*1024*1024) {
+		if (file.size > 8*1024*1024) {
 			window.alert("Size too big, select file smaller than 10 MB");
 			x.files.splice(i, 1);
 		} else {
-			txt += "size: " + formatBytes(file.size) + " bytes <br></section><video  onclick='playMe(this)' class='previewImg' src='"+ URL.createObjectURL(file) +"'></video></article>";
+			txt += "size: " + formatBytes(file.size) + " bytes <br><span>Tags: </span><input type='text' value='' name='tags'></section><video  onclick='playMe(this)' class='previewImg' src='"+ URL.createObjectURL(file) +"'></video></article>";
 		  }
         }
       }

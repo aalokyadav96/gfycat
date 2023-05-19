@@ -3,7 +3,19 @@
 <html>
 	<body>
 	<div>{{range .}}
-			<video controls src="{{.}}"></video>{{end}}
+		<video width="320" height="480" controls preload="metadata" poster="#">
+			<source src="{{.}}#t=0.1" type="video/mp4">
+			<source src="{{.}}" type="video/ogg">
+			Your browser does not support the video tag.
+		</video>
+		{{end}}
 		</div>
+		<style>
+			video {
+				width: 100vw;
+				height: 100vh;
+				background: transparent url('video-image.jpg') 50% 50% / cover no-repeat ;
+			}
+		</style>
 	</body>
 </html>
